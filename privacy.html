@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Diem</title>
+    <meta name="description" content="Privacy Policy for Diem - Daily Planner App">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --background: #FAFAFA;
+            --surface: #FFFFFF;
+            --primary: #1A1A1A;
+            --secondary: #6B7280;
+            --accent: #3B82F6;
+            --accent-light: #EFF6FF;
+            --divider: #E5E7EB;
+            --success: #10B981;
+            --error: #EF4444;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #0A0A0A;
+                --surface: #141414;
+                --primary: #FAFAFA;
+                --secondary: #A1A1AA;
+                --accent: #60A5FA;
+                --accent-light: #1E3A5F;
+                --divider: #27272A;
+                --success: #34D399;
+                --error: #F87171;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--background);
+            color: var(--primary);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 15px;
+            margin-bottom: 32px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: var(--secondary);
+            font-size: 15px;
+        }
+
+        .update-date {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-top: 16px;
+        }
+
+        .summary-box {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+
+        .summary-box h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+
+        .summary-box p {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: -0.3px;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            margin-top: 24px;
+        }
+
+        p {
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        .list-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .list-icon.no {
+            color: var(--error);
+        }
+
+        .list-icon.yes {
+            color: var(--success);
+        }
+
+        .list-content {
+            flex: 1;
+        }
+
+        .list-title {
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .list-description {
+            font-size: 15px;
+            color: var(--secondary);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        th {
+            font-weight: 600;
+            color: var(--secondary);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table-card {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-box {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .contact-box .label {
+            font-size: 13px;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .contact-box .email {
+            font-size: 17px;
+            font-weight: 500;
+            color: var(--accent);
+        }
+
+        .contact-info {
+            margin-top: 16px;
+            font-size: 15px;
+            color: var(--secondary);
+        }
+
+        .faq-section {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-item {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .faq-answer {
+            color: var(--secondary);
+            font-size: 15px;
+        }
+
+        .faq-answer.yes {
+            color: var(--success);
+            font-weight: 500;
+        }
+
+        .faq-answer.no {
+            color: var(--error);
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--divider);
+            margin-top: 48px;
+        }
+
+        footer p {
+            color: var(--secondary);
+            font-size: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 32px 16px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .summary-box p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Diem</a>
+
+        <header>
+            <div class="logo">🔒</div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Diem - Daily Planner</p>
+            <span class="update-date">Last Updated: February 11, 2026</span>
+        </header>
+
+        <div class="summary-box">
+            <h2>The Short Version</h2>
+            <p>We don't collect, store, or share your personal data. Everything stays on your device.</p>
+        </div>
+
+        <section>
+            <h2>Overview</h2>
+            <p>Diem is a daily planning app designed with privacy at its core. We believe your personal data belongs to you—and only you.</p>
+        </section>
+
+        <section>
+            <h2>What We Don't Collect</h2>
+            <div class="card">
+                <div class="list-item">
+                    <span class="list-icon no">✕</span>
+                    <div class="list-content">
+                        <div class="list-title">Personal Information</div>
+                        <div class="list-description">No name, email, or phone number required</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span class="list-icon no">✕</span>
+                    <div class="list-content">
+                        <div class="list-title">Account Credentials</div>
+                        <div class="list-description">No account needed to use Diem</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span class="list-icon no">✕</span>
+                    <div class="list-content">
+                        <div class="list-title">Location Data</div>
+                        <div class="list-description">We never access your location</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span class="list-icon no">✕</span>
+                    <div class="list-content">
+                        <div class="list-title">Usage Analytics</div>
+                        <div class="list-description">No tracking of how you use the app</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span class="list-icon no">✕</span>
+                    <div class="list-content">
+                        <div class="list-title">Your Content</div>
+                        <div class="list-description">We can't see your intentions, priorities, or reflections</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>What Stays On Your Device</h2>
+            <div class="card">
+                <div class="list-item">
+                    <span class="list-icon yes">✓</span>
+                    <div class="list-content">
+                        <div class="list-title">Daily Intentions</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span class="list-icon yes">✓</span>
+                    <div class="list-content">
+                        <div class="list-title">Priorities</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span class="list-icon yes">✓</span>
+                    <div class="list-content">
+                        <div class="list-title">Time Blocks</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span class="list-icon yes">✓</span>
+                    <div class="list-content">
+                        <div class="list-title">Evening Reflections</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span class="list-icon yes">✓</span>
+                    <div class="list-content">
+                        <div class="list-title">App Settings & Preferences</div>
+                    </div>
+                </div>
+            </div>
+            <p>This data never leaves your device unless you explicitly enable iCloud sync.</p>
+        </section>
+
+        <section>
+            <h2>iCloud Sync (Optional)</h2>
+            <p>If you choose to enable iCloud sync:</p>
+            <div class="card">
+                <div class="list-item">
+                    <span class="list-icon">☁️</span>
+                    <div class="list-content">
+                        <div class="list-title">Your data is stored in your personal iCloud account</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span class="list-icon">🔒</span>
+                    <div class="list-content">
+                        <div class="list-title">Data is encrypted by Apple in transit and at rest</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span class="list-icon">🚫</span>
+                    <div class="list-content">
+                        <div class="list-title">We cannot access your iCloud data</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span class="list-icon">⚙️</span>
+                    <div class="list-content">
+                        <div class="list-title">You can disable sync at any time in Settings</div>
+                    </div>
+                </div>
+            </div>
+            <p>For more information, visit <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+        </section>
+
+        <section>
+            <h2>Third-Party Services</h2>
+            
+            <h3>Apple Services</h3>
+            <div class="table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Purpose</th>
+                            <th>Data Shared</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>StoreKit</td>
+                            <td>In-app purchases</td>
+                            <td>Handled by Apple</td>
+                        </tr>
+                        <tr>
+                            <td>CloudKit</td>
+                            <td>Optional sync</td>
+                            <td>Encrypted, in your iCloud</td>
+                        </tr>
+                        <tr>
+                            <td>WidgetKit</td>
+                            <td>Home screen widgets</td>
+                            <td>None</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>No Third-Party SDKs</h3>
+            <p>Diem does not integrate analytics, advertising, social media SDKs, or crash reporting services.</p>
+        </section>
+
+        <section>
+            <h2>In-App Purchases</h2>
+            <p>Diem offers optional premium features via subscription. Purchases are processed entirely by Apple. We only receive confirmation that a purchase was made and subscription status. We do not receive your payment information or Apple ID.</p>
+        </section>
+
+        <section>
+            <h2>Data Security</h2>
+            <div class="card">
+                <div class="list-item">
+                    <span class="list-icon">🔐</span>
+                    <div class="list-content">
+                        <div class="list-title">Local Encryption</div>
+                        <div class="list-description">iOS Data Protection encrypts your data at rest</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span class="list-icon">📱</span>
+                    <div class="list-content">
+                        <div class="list-title">No Transmission</div>
+                        <div class="list-description">Data stays on your device unless iCloud sync is enabled</div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span class="list-icon">🚫</span>
+                    <div class="list-content">
+                        <div class="list-title">No Servers</div>
+                        <div class="list-description">We don't operate servers that store user data</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Children's Privacy</h2>
+            <p>Diem does not knowingly collect information from children under 13. The app contains no features that require personal information from any user.</p>
+        </section>
+
+        <section>
+            <h2>Your Rights</h2>
+            <p>Since we don't collect your data, there's nothing to request access to, delete, export, or correct. Your data is yours. It lives on your device. You have full control.</p>
+            <p><strong>To delete all app data:</strong> Simply delete the Diem app from your device.</p>
+        </section>
+
+        <section>
+            <h2>Quick Reference</h2>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">Do you collect my data?</div>
+                    <div class="faq-answer no">No</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you sell my data?</div>
+                    <div class="faq-answer no">No</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you use analytics?</div>
+                    <div class="faq-answer no">No</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you show ads?</div>
+                    <div class="faq-answer no">No</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can you see my intentions?</div>
+                    <div class="faq-answer no">No</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Where is my data stored?</div>
+                    <div class="faq-answer">On your device only</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What about iCloud?</div>
+                    <div class="faq-answer">Optional, encrypted, in your personal iCloud</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Changes will be reflected in the "Last Updated" date above. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <div class="contact-box">
+                <div class="label">Questions or concerns?</div>
+                <a href="mailto:achillestzeneto@gmail.com" class="email">achillestzeneto@gmail.com</a>
+                <div class="contact-info">
+                    Developer: Achilleas<br>
+                    Location: Athens, Greece
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p><em>Diem is designed for your privacy. Plan with peace of mind.</em></p>
+            <p style="margin-top: 16px;">✨ Carpe Diem</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Diem</title>
+    <meta name="description" content="Get help and support for Diem - Daily Planner App">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --background: #FAFAFA;
+            --surface: #FFFFFF;
+            --primary: #1A1A1A;
+            --secondary: #6B7280;
+            --accent: #3B82F6;
+            --accent-light: #EFF6FF;
+            --divider: #E5E7EB;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #0A0A0A;
+                --surface: #141414;
+                --primary: #FAFAFA;
+                --secondary: #A1A1AA;
+                --accent: #60A5FA;
+                --accent-light: #1E3A5F;
+                --divider: #27272A;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--background);
+            color: var(--primary);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 15px;
+            margin-bottom: 32px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: var(--secondary);
+            font-size: 17px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: -0.3px;
+        }
+
+        p {
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .contact-card {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .contact-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .contact-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .contact-description {
+            color: var(--secondary);
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-email {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 17px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .contact-email:hover {
+            opacity: 0.8;
+        }
+
+        .faq-section {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .faq-item {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .faq-question::before {
+            content: "Q";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: var(--accent-light);
+            color: var(--accent);
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            color: var(--secondary);
+            font-size: 15px;
+            padding-left: 36px;
+        }
+
+        .quick-tips {
+            display: grid;
+            gap: 16px;
+        }
+
+        .tip-card {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .tip-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .tip-content h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .tip-content p {
+            font-size: 15px;
+            color: var(--secondary);
+            margin-bottom: 0;
+        }
+
+        .response-time {
+            background: var(--accent-light);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        .response-time p {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--divider);
+            margin-top: 48px;
+        }
+
+        footer p {
+            color: var(--secondary);
+            font-size: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 32px 16px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .contact-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Diem</a>
+
+        <header>
+            <div class="logo">💬</div>
+            <h1>Support</h1>
+            <p class="subtitle">We're here to help you make the most of Diem</p>
+        </header>
+
+        <section>
+            <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <div class="contact-title">Get in Touch</div>
+                <p class="contact-description">Have a question, found a bug, or want to share feedback?<br>We'd love to hear from you.</p>
+                <a href="mailto:achillestzeneto@gmail.com" class="contact-email">achillestzeneto@gmail.com</a>
+                <div class="response-time">
+                    <p>We typically respond within 24-48 hours</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">How do I set my daily intention?</div>
+                    <div class="faq-answer">When you open Diem in the morning, tap "Plan Your Day" to start the planning flow. The first step will ask you to choose how you want to feel today.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I have more than 3 priorities?</div>
+                    <div class="faq-answer">Diem is designed around the philosophy that less is more. By limiting yourself to 3 priorities, you're more likely to actually complete them. Quality over quantity!</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Where is my data stored?</div>
+                    <div class="faq-answer">All your data is stored locally on your device. If you're a Premium subscriber, you can optionally enable iCloud sync to keep your data across devices.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How do I restore my Premium subscription?</div>
+                    <div class="faq-answer">Go to Settings in the app and tap "Restore Purchases". This will restore any active subscriptions linked to your Apple ID.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How do I cancel my subscription?</div>
+                    <div class="faq-answer">Open the Settings app on your iPhone → Tap your name → Subscriptions → Find Diem and tap Cancel. You'll continue to have access until the end of your billing period.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Will I lose my data if I delete the app?</div>
+                    <div class="faq-answer">Yes, if data is stored only on your device. If you have iCloud sync enabled (Premium), your data will be restored when you reinstall the app.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How do I add a widget to my Home Screen?</div>
+                    <div class="faq-answer">Long-press on your Home Screen → Tap the + button → Search for "Diem" → Choose a widget size → Tap "Add Widget".</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I customize the reminder times?</div>
+                    <div class="faq-answer">Yes! Go to Settings in the app to customize when you receive morning planning and evening review reminders.</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Quick Tips</h2>
+            <div class="quick-tips">
+                <div class="tip-card">
+                    <span class="tip-icon">☀️</span>
+                    <div class="tip-content">
+                        <h3>Plan in the morning</h3>
+                        <p>Take 2-3 minutes each morning to set your intention before checking emails or messages.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-icon">🎯</span>
+                    <div class="tip-content">
+                        <h3>Be specific with priorities</h3>
+                        <p>Instead of "Work on project", try "Complete the intro section of the presentation".</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-icon">⚡</span>
+                    <div class="tip-content">
+                        <h3>Schedule deep work during peak energy</h3>
+                        <p>Use the peak energy indicator to plan demanding tasks when you're most alert.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-icon">🌙</span>
+                    <div class="tip-content">
+                        <h3>Don't skip the evening review</h3>
+                        <p>A quick reflection helps you learn and improves tomorrow's planning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Request a Refund</h2>
+            <p>All purchases are processed through Apple's App Store. If you need a refund, please visit Apple's Report a Problem page:</p>
+            <p><a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a></p>
+        </section>
+
+        <section>
+            <h2>Report a Bug</h2>
+            <p>Found something that's not working right? We appreciate you taking the time to let us know. When reporting a bug, please include:</p>
+            <ul style="padding-left: 24px; margin-top: 12px;">
+                <li>Your device model (e.g., iPhone 15 Pro)</li>
+                <li>iOS version (e.g., iOS 17.2)</li>
+                <li>A description of what happened</li>
+                <li>Steps to reproduce the issue (if possible)</li>
+            </ul>
+            <p style="margin-top: 16px;">Send bug reports to: <a href="mailto:achillestzeneto@gmail.com">achillestzeneto@gmail.com</a></p>
+        </section>
+
+        <footer>
+            <p>Thank you for using Diem!</p>
+            <p style="margin-top: 8px;">✨ Carpe Diem</p>
+        </footer>
+    </div>
+</body>
+</html>

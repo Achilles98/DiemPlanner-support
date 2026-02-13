@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diem - Plan Your Day with Purpose</title>
+    <meta name="description" content="Diem is a minimal daily planner that helps you start each day with intention. Set your intention, focus on 3 priorities, and seize the day.">
+    <meta name="keywords" content="diem, daily planner, intention, productivity, iOS app, minimal planner">
+    <meta property="og:title" content="Diem - Plan Your Day with Purpose">
+    <meta property="og:description" content="A minimal daily planner for intentional living. Carpe Diem.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --background: #FAFAFA;
+            --surface: #FFFFFF;
+            --primary: #1A1A1A;
+            --secondary: #6B7280;
+            --accent: #3B82F6;
+            --accent-light: #EFF6FF;
+            --divider: #E5E7EB;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #0A0A0A;
+                --surface: #141414;
+                --primary: #FAFAFA;
+                --secondary: #A1A1AA;
+                --accent: #60A5FA;
+                --accent-light: #1E3A5F;
+                --divider: #27272A;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--background);
+            color: var(--primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 48px 24px;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .logo {
+            font-size: 72px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: var(--secondary);
+            margin-bottom: 32px;
+        }
+
+        .app-store-badge {
+            display: inline-block;
+            margin-top: 16px;
+        }
+
+        .app-store-badge img {
+            height: 54px;
+        }
+
+        .app-store-placeholder {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--background);
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 17px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .app-store-placeholder:hover {
+            opacity: 0.8;
+        }
+
+        .features {
+            display: grid;
+            gap: 16px;
+            margin: 48px 0;
+        }
+
+        .feature {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+
+        .feature-content h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .feature-content p {
+            font-size: 15px;
+            color: var(--secondary);
+        }
+
+        .links-section {
+            text-align: center;
+            padding: 48px 0;
+            border-top: 1px solid var(--divider);
+            margin-top: 48px;
+        }
+
+        .links-section h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 1px solid var(--divider);
+        }
+
+        footer p {
+            color: var(--secondary);
+            font-size: 14px;
+        }
+
+        footer .email {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer .email:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 48px 0;
+            }
+
+            .logo {
+                font-size: 56px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .tagline {
+                font-size: 17px;
+            }
+
+            .links {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">✨</div>
+            <h1>Diem</h1>
+            <p class="tagline">Plan your day with purpose</p>
+            
+            <!-- Replace with actual App Store link when available -->
+            <a href="#" class="app-store-placeholder">Coming Soon to App Store</a>
+            
+            <!-- Uncomment when app is live:
+            <a href="https://apps.apple.com/app/diem/id000000000" class="app-store-badge">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
+            </a>
+            -->
+        </header>
+
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">☀️</span>
+                <div class="feature-content">
+                    <h3>Start with Intention</h3>
+                    <p>Begin each day by choosing how you want to feel. Focused? Calm? Energized? Your intention becomes your compass.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🎯</span>
+                <div class="feature-content">
+                    <h3>Focus on What Matters</h3>
+                    <p>Not 10 tasks. Not 20. Just 3 priorities. Because when everything is important, nothing is.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">⏱️</span>
+                <div class="feature-content">
+                    <h3>Design Your Day</h3>
+                    <p>Structure your time with blocks that match your energy. Deep work when you're sharp. Rest when you need it.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🌙</span>
+                <div class="feature-content">
+                    <h3>Reflect & Grow</h3>
+                    <p>Close your day with a simple reflection. Did you honor your intention? Celebrate wins. Learn from the rest.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🔒</span>
+                <div class="feature-content">
+                    <h3>Privacy First</h3>
+                    <p>Your data stays on your device. No accounts. No tracking. No cloud required. Just you and your plans.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="links-section">
+            <h2>Legal</h2>
+            <div class="links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="support.html">Support</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with 💙 in Athens, Greece</p>
+        <p style="margin-top: 8px;">
+            <a href="mailto:achillestzeneto@gmail.com" class="email">achillestzeneto@gmail.com</a>
+        </p>
+        <p style="margin-top: 16px;">© 2026 Diem. Carpe Diem.</p>
+    </footer>
+</body>
+</html>
